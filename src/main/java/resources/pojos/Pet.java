@@ -1,5 +1,8 @@
 package resources.pojos;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pet {
 
     private Integer pet_id;
@@ -11,6 +14,9 @@ public class Pet {
     private String sex;
     private String picture;
     private String owner_username;
+    private List<Visit> visits= new ArrayList<Visit>();
+    private List<Case> cases = new ArrayList<Case>();
+    
     public Pet (){}
     /**
      *
@@ -175,5 +181,22 @@ public class Pet {
      */
     public void setOwner_username(String owner_username) {
         this.owner_username = owner_username;
+    }
+
+    /**
+     * add the visit to the list of visits
+     *
+     * @param vist a new visit of the pet
+     */
+    public void addVisits( Visit vist){
+        addVisits(vist);
+    }
+    /**
+     * add the case to the list of cases
+     *
+     * @param onecase a new case of the pet
+     */
+    public void addCase( Case onecase){
+        addCase(onecase);
     }
 }
