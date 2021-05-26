@@ -5,7 +5,7 @@ import java.util.Date;
 public class Visit {
 
     private Integer visit_id;
-    private Date created_at;
+    private String created_at;
     private String type;
     private String description;
     private Integer vet_id;
@@ -19,13 +19,17 @@ public class Visit {
      * @param vet_id      the veterinary id
      * @param pet_id      the pet id
      */
-    public Visit(Integer visit_id, Date created_at, String type, String description, Integer vet_id, Integer pet_id) {
+    public Visit(Integer visit_id, String created_at, String type, String description, Integer vet_id, Integer pet_id) {
         this.visit_id = visit_id;
         this.created_at = created_at;
         this.type = type;
         this.description = description;
         this.vet_id = vet_id;
         this.pet_id = pet_id;
+    }
+
+    public Visit() {
+
     }
 
     /**
@@ -45,14 +49,14 @@ public class Visit {
     /**
      * @return the creation date of the visit
      */
-    public Date getCreated_at() {
+    public String getCreated_at() {
         return created_at;
     }
 
     /**
      * @param created_at the new creation date of the visit
      */
-    public void setCreated_at(Date created_at) {
+    public void setCreated_at(String created_at) {
         this.created_at = created_at;
     }
 

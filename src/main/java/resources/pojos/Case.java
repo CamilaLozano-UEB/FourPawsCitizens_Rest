@@ -1,32 +1,31 @@
 package resources.pojos;
 
-import java.util.Date;
-
 public class Case {
     private Integer case_id;
-    private Date created_at;
+    private String created_at;
     private String type;
     private String description;
     private Integer pet_id;
 
     /**
-     *
-     * @param case_id the case id
-     * @param created_at the creation date of the case
-     * @param type  the type of case
-     * @param description  the description of case
-     * @param pet_id  the pet id
+     * @param case_id     the case id
+     * @param created_at  the creation date of the case
+     * @param type        the type of case
+     * @param description the description of case
+     * @param pet_id      the pet id
      */
-    public Case(Integer case_id, Date created_at,String type, String description, Integer pet_id) {
+    public Case(Integer case_id, String created_at, String type, String description, Integer pet_id) {
         this.case_id = case_id;
-        this.created_at=created_at;
-        this.type=type;
-        this.description=description;
-        this.pet_id=pet_id;
+        this.created_at = created_at;
+        this.type = type;
+        this.description = description;
+        this.pet_id = pet_id;
+    }
+
+    public Case() {
     }
 
     /**
-     *
      * @return the case id
      */
     public Integer getCase_id() {
@@ -34,7 +33,6 @@ public class Case {
     }
 
     /**
-     *
      * @param case_id the case id
      */
     public void setCase_id(Integer case_id) {
@@ -42,23 +40,20 @@ public class Case {
     }
 
     /**
-     *
      * @return the creation date of the case
      */
-    public Date getCreated_at() {
+    public String getCreated_at() {
         return created_at;
     }
 
     /**
-     *
      * @param created_at the creation date of the case
      */
-    public void setCreated_at(Date created_at) {
+    public void setCreated_at(String created_at) {
         this.created_at = created_at;
     }
 
     /**
-     *
      * @return the type of case
      */
     public String getType() {
@@ -66,7 +61,6 @@ public class Case {
     }
 
     /**
-     *
      * @param type the type of case
      */
     public void setType(String type) {
@@ -74,7 +68,6 @@ public class Case {
     }
 
     /**
-     *
      * @return the description of case
      */
     public String getDescription() {
@@ -82,7 +75,6 @@ public class Case {
     }
 
     /**
-     *
      * @param description the description of case
      */
     public void setDescription(String description) {
@@ -90,7 +82,6 @@ public class Case {
     }
 
     /**
-     *
      * @return the pet id
      */
     public Integer getPet_id() {
@@ -98,7 +89,6 @@ public class Case {
     }
 
     /**
-     *
      * @param pet_id the pet id
      */
     public void setPet_id(Integer pet_id) {
