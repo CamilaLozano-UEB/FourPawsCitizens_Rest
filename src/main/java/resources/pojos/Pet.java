@@ -14,37 +14,37 @@ public class Pet {
     private String sex;
     private String picture;
     private String owner_username;
-    private List<Visit> visits= new ArrayList<Visit>();
+    private List<Visit> visits = new ArrayList<Visit>();
     private List<Case> cases = new ArrayList<Case>();
 
-    public Pet (){}
+    public Pet() {
+    }
+
     /**
-     *
-     * @param pet_Id the pet id
+     * @param pet_Id    the pet id
      * @param microchip the microchip of the pet
-     * @param name the name of the pet
-     * @param species the species of the pet
-     * @param race the race of the pet
-     * @param size the size of the pet
-     * @param sex the sex of the pet
-     * @param picture the picture of the pet
-     * @param owner_id the owner id of the pet
+     * @param name      the name of the pet
+     * @param species   the species of the pet
+     * @param race      the race of the pet
+     * @param size      the size of the pet
+     * @param sex       the sex of the pet
+     * @param picture   the picture of the pet
+     * @param owner_id  the owner id of the pet
      */
     public Pet(Integer pet_Id, Long microchip, String name, String species, String race, String size, String sex, String picture, String owner_id) {
         this.pet_id = pet_Id;
-        this.microchip=microchip;
-        this.name=name;
-        this.species=species;
-        this.race=race;
-        this.size=size;
-        this.sex=sex;
-        this.picture= picture;
+        this.microchip = microchip;
+        this.name = name;
+        this.species = species;
+        this.race = race;
+        this.size = size;
+        this.sex = sex;
+        this.picture = picture;
         this.owner_username = owner_id;
 
     }
 
     /**
-     *
      * @return the pet id
      */
     public Integer getPet_id() {
@@ -52,7 +52,6 @@ public class Pet {
     }
 
     /**
-     *
      * @return the name of the pet
      */
     public String getName() {
@@ -60,7 +59,6 @@ public class Pet {
     }
 
     /**
-     *
      * @param name the name of the pet
      */
     public void setName(String name) {
@@ -68,7 +66,6 @@ public class Pet {
     }
 
     /**
-     *
      * @param pet_id the pet id
      */
     public void setPet_id(Integer pet_id) {
@@ -76,7 +73,6 @@ public class Pet {
     }
 
     /**
-     *
      * @return the microchip of the pet
      */
     public Long getMicrochip() {
@@ -84,7 +80,6 @@ public class Pet {
     }
 
     /**
-     *
      * @param microchip the microchip of the pet
      */
     public void setMicrochip(Long microchip) {
@@ -92,7 +87,6 @@ public class Pet {
     }
 
     /**
-     *
      * @return the species of the pet
      */
     public String getSpecies() {
@@ -100,7 +94,6 @@ public class Pet {
     }
 
     /**
-     *
      * @param species the species of the pet
      */
     public void setSpecies(String species) {
@@ -108,7 +101,6 @@ public class Pet {
     }
 
     /**
-     *
      * @return the race of the pet
      */
     public String getRace() {
@@ -116,7 +108,6 @@ public class Pet {
     }
 
     /**
-     *
      * @param race the race of the pet
      */
     public void setRace(String race) {
@@ -124,7 +115,6 @@ public class Pet {
     }
 
     /**
-     *
      * @return the size of the pet
      */
     public String getSize() {
@@ -132,7 +122,6 @@ public class Pet {
     }
 
     /**
-     *
      * @param size the size of the pet
      */
     public void setSize(String size) {
@@ -140,7 +129,6 @@ public class Pet {
     }
 
     /**
-     *
      * @return the sex of the pet
      */
     public String getSex() {
@@ -148,55 +136,56 @@ public class Pet {
     }
 
     /**
-     *
-     * @param sex  the sex of the pet
+     * @param sex the sex of the pet
      */
     public void setSex(String sex) {
         this.sex = sex;
     }
+
     /**
-     *
      * @return the picture of the pet
      */
     public String getPicture() {
         return picture;
     }
+
     /**
-     *
      * @param picture the picture of the pet
      */
     public void setPicture(String picture) {
         this.picture = picture;
     }
+
     /**
-     *
      * @return the owner id of the pet
      */
     public String getOwner_username() {
         return owner_username;
     }
+
     /**
-     *
      * @param owner_username the owner id of the pet
      */
     public void setOwner_username(String owner_username) {
         this.owner_username = owner_username;
     }
 
+
     /**
      * add the visit to the list of visits
      *
      * @param vist a new visit of the pet
      */
-    public void addVisits( Visit vist){
+    public void addVisits(Visit vist) {
         addVisits(vist);
     }
+
     /**
      * add the case to the list of cases
      *
      * @param onecase a new case of the pet
      */
-    public void addCase( Case onecase){
+    public void addCase(Case onecase) {
         addCase(onecase);
     }
 }

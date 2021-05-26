@@ -1,5 +1,8 @@
 package resources.pojos;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Owner {
 
     private String username;
@@ -7,6 +10,8 @@ public class Owner {
     private String name;
     private String address;
     private String neighborhood;
+    private List<Pet> pets =new ArrayList<Pet>();
+
 
     public Owner() {
 
@@ -96,4 +101,13 @@ public class Owner {
     public void setNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
     }
+
+    /**
+     * add a pet to the list of pets
+     * @param pet, a new pet of the owner
+     */
+    public void addPets(Pet pet) {
+        addPets(pet);
+    }
+
 }
