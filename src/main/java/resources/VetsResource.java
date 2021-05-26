@@ -37,9 +37,10 @@ public class VetsResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response create(Vet vet) {
+    @Path("{username}")
+    public Response create(@PathParam("username") String username, Vet vet) {
 
-        vet.setUsername("JuanT");
+        vet.setUsername(username);
 
         return Response.status(Response.Status.CREATED)
                 .entity(vet)

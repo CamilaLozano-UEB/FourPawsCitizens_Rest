@@ -19,9 +19,9 @@ public class PetResource {
     public Response list(@PathParam("username") String username,@PathParam("microchip") Long microchip,@PathParam("name") String name,
                          @PathParam("species") String species, @PathParam("race") String race, @PathParam("size") String size,@PathParam("sex") String sex) {
        List<Pet> pets_filter = new ArrayList<Pet>();
-        pets.add(new Pet(1, 0L,"juanito","loro","tucan","grande", "hombre",null, "npm"));
-        pets.add(new Pet(2, 1L,"mia","perro","labrador","grande", "femenino","1.png", "mclg"));
-        pets.add(new Pet(3,2L,"lola","vaca","vaca","grande", "mujer",null, "jvtp"));
+        pets.add(new Pet(1, 0L,"juanito","loro","tucan","grande", "macho",null, "npm"));
+        pets.add(new Pet(2, 1L,"mia","perro","labrador","grande", "hembra","1.png", "mclg"));
+        pets.add(new Pet(3,2L,"lola","vaca","vaca","grande", "hembra",null, "jvtp"));
 
         for (Integer i= 0; i< pets.size(); i++){
             if(pets.get(i).getOwner_username().equals(username)&&pets.get(i).getMicrochip().equals(microchip)&&pets.get(i).getName().equals(name)&&pets.get(i).getSpecies().equals( species)&&

@@ -37,9 +37,10 @@ public class OwnersResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response create(Owner owner) {
+    @Path("{username}")
+    public Response create(@PathParam("username") String username, Owner owner) {
 
-        owner.setUsername("JuanaT");
+        owner.setUsername(username);
 
         return Response.status(Response.Status.CREATED)
                 .entity(owner)
