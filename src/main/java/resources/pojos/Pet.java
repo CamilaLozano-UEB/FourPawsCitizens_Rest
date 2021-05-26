@@ -10,8 +10,8 @@ public class Pet {
     private String size;
     private String sex;
     private String picture;
-    private Integer owner_id;
-
+    private String owner_username;
+    public Pet (){}
     /**
      *
      * @param pet_Id the pet id
@@ -24,7 +24,7 @@ public class Pet {
      * @param picture the picture of the pet
      * @param owner_id the owner id of the pet
      */
-    public Pet(Integer pet_Id, Long microchip, String name, String species, String race, String size, String sex, String picture, Integer owner_id) {
+    public Pet(Integer pet_Id, Long microchip, String name, String species, String race, String size, String sex, String picture, String owner_id) {
         this.pet_id = pet_Id;
         this.microchip=microchip;
         this.name=name;
@@ -33,7 +33,7 @@ public class Pet {
         this.size=size;
         this.sex=sex;
         this.picture= picture;
-        this.owner_id= owner_id;
+        this.owner_username = owner_id;
 
     }
 
@@ -166,14 +166,14 @@ public class Pet {
      *
      * @return the owner id of the pet
      */
-    public Integer getOwner_id() {
-        return owner_id;
+    public String getOwner_username() {
+        return owner_username;
     }
     /**
      *
-     * @param owner_id the owner id of the pet
+     * @param owner_username the owner id of the pet
      */
-    public void setOwner_id(Integer owner_id) {
-        this.owner_id = owner_id;
+    public void setOwner_username(String owner_username) {
+        this.owner_username = owner_username;
     }
 }
