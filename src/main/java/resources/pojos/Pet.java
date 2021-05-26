@@ -177,7 +177,7 @@ public class Pet {
      * @param vist a new visit of the pet
      */
     public void addVisits(Visit vist) {
-        addVisits(vist);
+        visits.add(vist);
     }
 
     /**
@@ -186,6 +186,6 @@ public class Pet {
      * @param onecase a new case of the pet
      */
     public void addCase(Case onecase) {
-        addCase(onecase);
+        cases.add(onecase);
     }
 }

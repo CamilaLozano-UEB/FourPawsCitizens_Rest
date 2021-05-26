@@ -32,6 +32,14 @@ public class Owner {
         this.neighborhood = neighborhood;
     }
 
+    public List<Pet> getPets() {
+        return pets;
+    }
+
+    public void setPets(List<Pet> pets) {
+        this.pets = pets;
+    }
+
     /**
      * @return the owner's username
      */
@@ -107,7 +115,7 @@ public class Owner {
      * @param pet, a new pet of the owner
      */
     public void addPets(Pet pet) {
-        addPets(pet);
+        pets.add(pet);
     }
 
 }
