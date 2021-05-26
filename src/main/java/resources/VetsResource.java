@@ -9,7 +9,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Path("/vets")
-public class VetsResources {
+public class VetsResource {
+
+    @Path("/vets/{id}")
+    @PUT
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response modify(@PathParam("id") String username, Vet vet) {
+
+        return Response.ok()
+                .entity(vet)
+                .build();
+    }
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response list() {

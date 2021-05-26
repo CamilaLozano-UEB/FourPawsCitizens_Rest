@@ -11,6 +11,16 @@ import java.util.List;
 @Path("/owners")
 public class OwnersResource {
 
+    @Path("{username}")
+        @PUT
+        @Produces(MediaType.APPLICATION_JSON)
+        public Response modify(@PathParam("username") String username, Owner owner) {
+
+            return Response.ok()
+                    .entity(owner)
+                    .build();
+        }
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response list() {
