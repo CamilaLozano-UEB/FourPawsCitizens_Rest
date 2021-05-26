@@ -16,7 +16,7 @@ public class Pet {
     private String owner_username;
     private List<Visit> visits= new ArrayList<Visit>();
     private List<Case> cases = new ArrayList<Case>();
-    
+
     public Pet (){}
     /**
      *
