@@ -1,7 +1,7 @@
 package resources;
 
 
-import resources.pojos.Pet;
+import resources.pojos.*;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -9,7 +9,7 @@ import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
 
-@Path("owenrs/{username}/pets")
+@Path("owners/{username}/pets")
 public class PetResource {
     List<Pet> pets = new ArrayList<Pet>();
 
@@ -32,6 +32,37 @@ public class PetResource {
 
         return Response.ok()
                 .entity(pets_filter)
+                .build();
+    }
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response list() {
+
+        List<SexPets> sexPets = new ArrayList<>();
+        List<SizePets> sizePets= new ArrayList<>();
+        List<RacePets> racePets = new ArrayList<>();
+        List<SpeciesPets> speciesPets = new ArrayList<>();
+
+        sexPets.add(new SexPets("Hembra", 5));
+        sexPets.add(new SexPets("Macho", 4));
+
+        sizePets.add(new SizePets("Mediano", 3));
+        sizePets.add(new SizePets("Pequeño", 3));
+        sizePets.add(new SizePets("Grande", 3));
+
+        racePets.add(new RacePets("Labrador",2));
+        racePets.add(new RacePets("Siberiano",1));
+        racePets.add(new RacePets("Pug",3));
+        racePets.add(new RacePets("Mestizo",2));
+        racePets.add(new RacePets("Siamés",1));
+
+        speciesPets.add(new SpeciesPets("Perro", 5));
+        speciesPets.add(new SpeciesPets("Gato", 4));
+
+        Pets pets = new Pets(9,6, 3, sexPets, sizePets,racePets, speciesPets);
+
+        return Response.ok()
+                .entity(pets)
                 .build();
     }
     @POST
