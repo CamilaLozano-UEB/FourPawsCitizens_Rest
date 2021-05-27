@@ -1,40 +1,46 @@
 package resources.pojos;
 
-public class TotalCases {
+public class CaseByType {
 
     private String type;
     private Integer total;
 
-    public TotalCases(String type, Integer total) {
+    /**
+     * @param type  the case type
+     * @param total the total of cases
+     */
+    public CaseByType(String type, Integer total) {
         this.type = type;
         this.total = total;
     }
 
-    public TotalCases(String type) {
-        this.type = type;
-        this.total = 1;
+    public CaseByType() {
     }
 
-    public TotalCases() {
-
-    }
-
-    public void increaseTotal() {
-        this.total++;
-    }
-
+    /**
+     * @return the case type
+     */
     public String getType() {
         return type;
     }
 
+    /**
+     * @param type the new case type
+     */
     public void setType(String type) {
         this.type = type;
     }
 
+    /**
+     * @return the total cases
+     */
     public Integer getTotal() {
         return total;
     }
 
+    /**
+     * @param total the new total cases
+     */
     public void setTotal(Integer total) {
         this.total = total;
     }

@@ -1,30 +1,48 @@
 package resources.pojos;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Cases {
-    List<Case> cases;
-    List<TotalCases> totalCases;
+    private Integer totalCases;
+    private List<CaseByType> caseByType;
+
+    /**
+     * @param totalCases the total of cases
+     * @param caseByType the list of cases
+     */
+    public Cases(Integer totalCases, List<CaseByType> caseByType) {
+        this.totalCases = totalCases;
+        this.caseByType = caseByType;
+    }
 
     public Cases() {
-        this.cases = new ArrayList<>();
-        this.totalCases = new ArrayList<>();
     }
 
-    public List<Case> getCases() {
-        return cases;
-    }
-
-    public void setCases(List<Case> cases) {
-        this.cases = cases;
-    }
-
-    public List<TotalCases> getTotalCases() {
+    /**
+     * @return the total of cases
+     */
+    public Integer getTotalCases() {
         return totalCases;
     }
 
-    public void setTotalCases(List<TotalCases> totalCases) {
+    /**
+     * @param totalCases the new total of cases
+     */
+    public void setTotalCases(Integer totalCases) {
         this.totalCases = totalCases;
+    }
+
+    /**
+     * @return the total of cases
+     */
+    public List<CaseByType> getTotalCase() {
+        return caseByType;
+    }
+
+    /**
+     * @param caseByType the new list of total cases
+     */
+    public void setTotalCase(List<CaseByType> caseByType) {
+        this.caseByType = caseByType;
     }
 }
