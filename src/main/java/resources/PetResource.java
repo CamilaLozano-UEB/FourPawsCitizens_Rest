@@ -11,18 +11,33 @@ import java.util.List;
 
 @Path("owners/{username}/pets")
 public class PetResource {
+    //Pet's list
     List<Pet> pets = new ArrayList<Pet>();
 
+    /**
+     * method that obtains a list of pets with their owners filtered by identification, sex, breed, size and species
+     *
+     * @param username  owner's username
+     * @param microchip pet's microchip
+     * @param name      pet's name
+     * @param species   pet's species
+     * @param race      pet's race
+     * @param size      pet's size
+     * @param sex       pet's sex
+     * @return status and entity of the operations
+     */
     @GET
     @Path("/{microchip}/{name}/{species}/{race}/{size}/{sex}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response list(@PathParam("username") String username, @PathParam("microchip") Long microchip, @PathParam("name") String name,
                          @PathParam("species") String species, @PathParam("race") String race, @PathParam("size") String size, @PathParam("sex") String sex) {
+        // pet's list
         List<Pet> pets_filter = new ArrayList<Pet>();
         pets.add(new Pet(1, 0L, "juanito", "loro", "tucan", "grande", "macho", null, "npm"));
         pets.add(new Pet(2, 1L, "mia", "perro", "labrador", "grande", "hembra", "1.png", "mclg"));
         pets.add(new Pet(3, 2L, "lola", "vaca", "vaca", "grande", "hembra", null, "jvtp"));
 
+        //a for that goes through the list of pets, compares their attributes and, if they are the same, adds them to the pets_filter arraylist
         for (Integer i = 0; i < pets.size(); i++) {
             if (pets.get(i).getOwner_username().equals(username) && pets.get(i).getMicrochip().equals(microchip) && pets.get(i).getName().equals(name) && pets.get(i).getSpecies().equals(species) &&
                     pets.get(i).getRace().equals(race) && pets.get(i).getSize().equals(size) && pets.get(i).getSex().equals(sex)) {
