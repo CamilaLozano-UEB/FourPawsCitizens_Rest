@@ -10,7 +10,13 @@ import java.util.List;
 
 @Path("/vets")
 public class VetsResource {
-
+    /**
+     * method that modifies the vet, using his username as a key
+     *
+     * @param username, vet's username that it´s his key
+     * @param vet,      vet's pojo
+     * @return status and entity of the operations
+     */
     @Path("/vets/{id}")
     @PUT
     @Produces(MediaType.APPLICATION_JSON)
@@ -21,6 +27,11 @@ public class VetsResource {
                 .build();
     }
 
+    /**
+     * Method that obtains as a resource the list of vets
+     *
+     * @return status and entity of the operation
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response list() {
@@ -34,6 +45,13 @@ public class VetsResource {
                 .build();
     }
 
+    /**
+     * Method that creates a vet using a username key
+     *
+     * @param username, vet's username
+     * @param vet       vet's pojo
+     * @return status and entity of the operation
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
