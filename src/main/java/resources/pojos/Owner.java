@@ -32,10 +32,18 @@ public class Owner {
         this.neighborhood = neighborhood;
     }
 
+    /**
+     *
+     * @return List of pets
+     */
     public List<Pet> getPets() {
         return pets;
     }
 
+    /**
+     *
+     * @param pets List of pets
+     */
     public void setPets(List<Pet> pets) {
         this.pets = pets;
     }
