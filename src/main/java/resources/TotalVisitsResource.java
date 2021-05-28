@@ -13,6 +13,11 @@ import java.util.List;
 @Path("/visits")
 public class TotalVisitsResource {
 
+    /**
+     * Create a response with an object that contains the total of visits and the total cases per type and per vet
+     *
+     * @return an object with the total of visits discriminated
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response listOfTotalVisits() {
