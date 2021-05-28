@@ -1,4 +1,4 @@
-package resources.pojos;
+package resources.pojos.cases;
 
 import java.util.List;
 

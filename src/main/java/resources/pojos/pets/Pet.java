@@ -1,4 +1,7 @@
-package resources.pojos;
+package resources.pojos.pets;
+
+import resources.pojos.cases.Case;
+import resources.pojos.visit.Visit;
 
 import java.util.ArrayList;
 import java.util.List;

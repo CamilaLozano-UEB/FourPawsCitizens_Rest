@@ -1,4 +1,4 @@
-package resources.pojos;
+package resources.pojos.visit;
 
 import java.util.Date;
 

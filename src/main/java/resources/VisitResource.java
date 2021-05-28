@@ -1,38 +1,49 @@
 package resources;
 
-import resources.pojos.Case;
-import resources.pojos.Visit;
+import resources.pojos.pets.Pet;
+import resources.pojos.visit.Visit;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Path("/visit")
+@Path("/vet/{vet_id}/pet/{pet_id}/visit")
 public class VisitResource {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("{vet_id}/{pet_id}")
     public Response create(@PathParam("vet_id") Integer vet_id, @PathParam("pet_id") Integer pet_id, Visit visit) {
 
-        visit.setVisit_id(3);//toca ver esto
+        visit.setVet_id(vet_id);
+        visit.setPet_id(pet_id);
+        visit.setVisit_id(3);
 
-        if (!visit.getType().equalsIgnoreCase("esterilización")
-                && !visit.getType().equalsIgnoreCase("implantación ")
-                && !visit.getType().equalsIgnoreCase("vacunación")
-                && !visit.getType().equalsIgnoreCase("desparasitación")
-                && !visit.getType().equalsIgnoreCase("urgencia ")
-                && !visit.getType().equalsIgnoreCase("control")) {
+        return Response.status(Response.Status.CREATED)
+                .entity(visit)
+                .build();
 
-            return Response.serverError().entity("El tipo de visita " + visit.getType() +
-                    " no está entre las opciones").build();
-        } else {
-            visit.setVet_id(vet_id);
-            visit.setPet_id(pet_id);
-            return Response.status(Response.Status.CREATED)
-                    .entity(visit)
-                    .build();
-        }
     }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("{microchip}")
+    public Response create(@PathParam("vet_id") Integer vet_id, @PathParam("pet_id") Integer pet_id,
+                           @PathParam("microchip") Long microchip, Visit visit) {
+
+        Pet pet = new Pet(pet_id, microchip, "Loky", "Canino", "Golden", "mediano", "macho",
+                "golden,jpg", "SilenceCam");
+
+        visit.setVet_id(vet_id);
+        visit.setPet_id(pet_id);
+        visit.setVisit_id(3);
+
+        return Response.status(Response.Status.CREATED)
+                .entity(visit)
+                .build();
+
+    }
+
+
 }

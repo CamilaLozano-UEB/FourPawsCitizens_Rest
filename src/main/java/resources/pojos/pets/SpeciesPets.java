@@ -1,25 +1,25 @@
-package resources.pojos;
+package resources.pojos.pets;
 
-public class SizePets {
+public class SpeciesPets {
     private String type;
     private Integer totalPets;
 
-    public SizePets() {
+    public SpeciesPets() {
     }
 
     /**
      *
-     * @param type pet size type
+     * @param type type of pet species
      * @param totalPets amount of type entered
      */
-    public SizePets(String type, Integer totalPets) {
+    public SpeciesPets(String type, Integer totalPets) {
         this.type = type;
         this.totalPets = totalPets;
     }
 
     /**
      *
-     * @return pet size type
+     * @return type of pet species
      */
     public String getType() {
         return type;
@@ -27,7 +27,7 @@ public class SizePets {
 
     /**
      *
-     * @param type pet size type
+     * @param type type of pet species
      */
     public void setType(String type) {
         this.type = type;

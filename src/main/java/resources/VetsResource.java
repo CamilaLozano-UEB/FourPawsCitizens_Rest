@@ -1,6 +1,6 @@
 package resources;
 
-import resources.pojos.Vet;
+import resources.pojos.vet.Vet;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

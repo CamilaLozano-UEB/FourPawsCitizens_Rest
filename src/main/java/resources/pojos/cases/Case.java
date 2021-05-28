@@ -1,4 +1,4 @@
-package resources.pojos;
+package resources.pojos.cases;
 
 public class Case {
     private Integer case_id;

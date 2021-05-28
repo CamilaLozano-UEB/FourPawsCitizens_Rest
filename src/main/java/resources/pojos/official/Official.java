@@ -1,4 +1,4 @@
-package resources.pojos;
+package resources.pojos.official;
 
 public class Official {
 

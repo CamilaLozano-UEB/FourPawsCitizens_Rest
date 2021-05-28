@@ -1,4 +1,4 @@
-package resources.pojos;
+package resources.pojos.pets;
 
 import java.util.List;
 

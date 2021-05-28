@@ -1,6 +1,6 @@
 package resources;
 
-import resources.pojos.Owner;
+import resources.pojos.owner.Owner;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

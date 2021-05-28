@@ -1,7 +1,7 @@
 package resources;
 
-import resources.pojos.CaseByType;
-import resources.pojos.Cases;
+import resources.pojos.cases.CaseByType;
+import resources.pojos.cases.Cases;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

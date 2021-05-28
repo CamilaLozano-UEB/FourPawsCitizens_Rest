@@ -1,4 +1,4 @@
-package resources.pojos;
+package resources.pojos.vet;
 
 public class Vet {
     private String username;

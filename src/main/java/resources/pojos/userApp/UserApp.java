@@ -1,4 +1,4 @@
-package resources.pojos;
+package resources.pojos.userApp;
 
 public class UserApp {
     private String username;

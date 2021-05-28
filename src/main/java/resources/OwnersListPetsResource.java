@@ -1,7 +1,7 @@
 package resources;
 
-import resources.pojos.Owner;
-import resources.pojos.Pet;
+import resources.pojos.owner.Owner;
+import resources.pojos.pets.Pet;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
