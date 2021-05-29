@@ -177,10 +177,10 @@ public class Pet {
     /**
      * add the visit to the list of visits
      *
-     * @param vist a new visit of the pet
+     * @param visit a new visit of the pet
      */
-    public void addVisits(Visit vist) {
-        visits.add(vist);
+    public void addVisits(Visit visit) {
+        visits.add(visit);
     }
 
     /**

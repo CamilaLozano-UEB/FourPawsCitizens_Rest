@@ -18,6 +18,7 @@ public class Visit {
      * @param vet_id      the veterinary id
      * @param pet_id      the pet id
      */
+    /*
     public Visit(Integer visit_id, String created_at, String type, String description, Integer vet_id, Integer pet_id) {
         this.visit_id = visit_id;
         this.created_at = created_at;
@@ -26,9 +27,9 @@ public class Visit {
         this.vet_id = vet_id;
         this.pet_id = pet_id;
     }
-
+*/
     /**
-     * Constructor if the case type is implantación de microchip
+     * Constructor if the case type is microchip implantation
      *
      * @param visit_id    the visit id
      * @param created_at  the creation date of the visit

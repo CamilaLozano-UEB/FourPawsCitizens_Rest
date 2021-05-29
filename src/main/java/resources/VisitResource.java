@@ -7,7 +7,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Path("/vet/{vet_id}/pet/{pet_id}/visits")
+@Path("/vets/{vet_id}/pets/{pet_id}/visits")
 public class VisitResource {
 
     /**
@@ -40,13 +40,15 @@ public class VisitResource {
             visit.setVisit_id(3);
 
             Pet pet = new Pet(pet_id, visit.getMicrochip(), "Loky", "Canino", "Golden", "mediano", "macho",
-                    "golden,jpg", "SilenceCam");
+                    "golden.jpg", "SilenceCam");
 
             return Response.status(Response.Status.CREATED)
                     .entity(visit)
                     .build();
         } else {
-
+            visit.setVet_id(vet_id);
+            visit.setPet_id(pet_id);
+            visit.setVisit_id(3);
             return Response.status(Response.Status.CREATED)
                     .entity(visit)
                     .build();
