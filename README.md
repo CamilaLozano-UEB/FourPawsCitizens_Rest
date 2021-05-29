@@ -29,10 +29,9 @@
 	<dd> IDE IntelliJ IDEA Ultimate 2021.1</dd>
 	<br>
 	<dt><h2><em> 7. Intrucciones de Uso </em></h2></dt>
-	<dd><b>7.1.</b> </dd>
-	<dd><b>7.2.</b> </dd>
-	<dd><b>7.3.</b> </dd>
-	<dd><b>7.4.</b> </dd>
-	<dd><b>7.5.</b> </dd>
+	<dd><b>7.1.</b> Primero, inicie el servidor WildFly en el ide de su preferencia y abra Postman sea la extensión de Chrome o la aplicación.</dd>
+	<dd><b>7.2.</b> Cuando abra postman puede probar las distintas URI para poder obtener los datos del servidor. Para esto vaya a la parte superior izquierda donde estara la pestaña de importar, en este repositorio se encontrara una carpeta con todas las collection que podra probar </dd>
+	<dd><b>7.3.</b> Cuando importe las Collection en formato .json, le apareceran en una columna izquierda con un indicativo si es get, put o post</dd>
+	<dd><b>7.4.</b> Para probar una request debe ingresar a la Collection y darle click a la que desee, como ya estara configurada con la operación correspondiente, con los datos de prueba apropiados solo debe dar click en send y postman le retornara los datos que pidio, creo o modifico</dd>
 	</dl>
 </html>
