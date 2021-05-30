@@ -32,8 +32,8 @@ public class OwnersListPetsResource {
         //pet's list
         List<Pet> pets = new ArrayList<Pet>();
         pets.add(new Pet(1, 0L, "juanito", "loro", "tucan", "grande", "masculino", null, "Nipemo"));
-        pets.add(new Pet(2, 1L, "mia", "perro", "labrador", "grande", "femenino", "1.png", "SilenceCam"));
-        pets.add(new Pet(3, 2L, "matty", "perro", "shitzu", "pequeño", "masculino", "2.png", "SilenceCam"));
+        pets.add(new Pet(2, 1L, "mia", "perro", "labrador", "grande", "femenino", null, "SilenceCam"));
+        pets.add(new Pet(3, 2L, "matty", "perro", "shitzu", "pequeño", "masculino", null, "SilenceCam"));
         List<Owner> ownersFilter = new ArrayList<Owner>();
         // A for that goes through the list of owners, if the owner is the same, add it to ownersFilter.
         // Then another cycle goes through the list of pets, eats them and adds them to ownersFilter.

@@ -40,7 +40,7 @@ public class VisitResource {
             visit.setVisit_id(3);
 
             Pet pet = new Pet(pet_id, visit.getMicrochip(), "Loky", "Canino", "Golden", "mediano", "macho",
-                    "golden.jpg", "SilenceCam");
+                    null, "SilenceCam");
 
             return Response.status(Response.Status.CREATED)
                     .entity(visit)

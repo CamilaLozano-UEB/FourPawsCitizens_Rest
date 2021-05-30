@@ -1,5 +1,6 @@
 package resources;
 
+import resources.pojos.pets.Pet;
 import resources.pojos.pets.PetImage;
 
 import javax.ws.rs.*;
@@ -21,9 +22,12 @@ public class PetImageResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response createImage(@PathParam("pet_id") Integer pet_id, PetImage petImage) {
         petImage.setPet_id(pet_id);
+        Pet pet = new Pet(pet_id, 0L, "juanito", "felino", "maine coon", "grande", "macho", petImage, "npm");
+
         return Response
                 .status(Response.Status.CREATED)
                 .entity(petImage)
                 .build();
     }
+
 }

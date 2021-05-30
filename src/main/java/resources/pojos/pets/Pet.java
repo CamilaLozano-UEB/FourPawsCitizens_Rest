@@ -15,7 +15,7 @@ public class Pet {
     private String race;
     private String size;
     private String sex;
-    private String picture;
+    private PetImage picture;
     private String owner_username;
     private List<Visit> visits = new ArrayList<Visit>();
     private List<Case> cases = new ArrayList<Case>();
@@ -34,7 +34,7 @@ public class Pet {
      * @param picture   the picture of the pet
      * @param owner_id  the owner id of the pet
      */
-    public Pet(Integer pet_Id, Long microchip, String name, String species, String race, String size, String sex, String picture, String owner_id) {
+    public Pet(Integer pet_Id, Long microchip, String name, String species, String race, String size, String sex, PetImage picture, String owner_id) {
         this.pet_id = pet_Id;
         this.microchip = microchip;
         this.name = name;
@@ -148,14 +148,14 @@ public class Pet {
     /**
      * @return the picture of the pet
      */
-    public String getPicture() {
+    public PetImage getPicture() {
         return picture;
     }
 
     /**
      * @param picture the picture of the pet
      */
-    public void setPicture(String picture) {
+    public void setPicture(PetImage picture) {
         this.picture = picture;
     }
 

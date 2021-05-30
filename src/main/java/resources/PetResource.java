@@ -34,7 +34,7 @@ public class PetResource {
         // pet's list
         List<Pet> pets_filter = new ArrayList<Pet>();
         pets.add(new Pet(1, 0L, "juanito", "loro", "tucan", "grande", "macho", null, "npm"));
-        pets.add(new Pet(2, 1L, "mia", "perro", "labrador", "grande", "hembra", "1.png", "mclg"));
+        pets.add(new Pet(2, 1L, "mia", "perro", "labrador", "grande", "hembra", null, "mclg"));
         pets.add(new Pet(3, 2L, "lola", "vaca", "vaca", "grande", "hembra", null, "jvtp"));
 
         //a for that goes through the list of pets, compares their attributes and, if they are the same, adds them to the pets_filter arraylist
