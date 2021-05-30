@@ -12,7 +12,7 @@
 	<dd>JBoss As -Wildfly 23.0.1.Final</dd>
 	<dd> PostgreSQL 10</dd>
 	<dd>PostgreSQL JDBC Driver 42.2.10</dd>
-  <dd> PostMan 5.5.5 </dd>
+        <dd> PostMan 8.5.1 </dd>
 	<dd>JDK 1.8</dd>
 	<br>
 	<dt><h2><em> 3. Link del proyecto </em></h2></dt>
