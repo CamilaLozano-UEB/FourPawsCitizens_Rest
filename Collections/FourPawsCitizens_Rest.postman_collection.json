@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "6f594e14-178a-1c98-2555-5cc9843c20be",
+		"_postman_id": "fcfe54bb-9c17-4ca1-89a2-7d230061ef1a",
 		"name": "FourPawsCitizens_Rest",
 		"description": "The resource implements of the proyect",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -420,33 +420,6 @@
 							]
 						},
 						"description": "Get List owners with their respective pets. This method should allow filtering by identification, name and locality."
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:8080/FourPawsCitizens_Rest-1.0-SNAPSHOT/api/owenrs/mclg/pets/1/mia/perro/labrador/grande/femenino",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"url": {
-							"raw": "http://localhost:8080/FourPawsCitizens_Rest-1.0-SNAPSHOT/api/owners",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"FourPawsCitizens_Rest-1.0-SNAPSHOT",
-								"api",
-								"owners"
-							]
-						},
-						"description": "Get Obtain total of registered and discriminated owners by location."
 					},
 					"response": []
 				}
